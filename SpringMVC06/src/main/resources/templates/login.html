@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login here page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- BootStrap의 Panels, Tables 템플릿 사용 -->
+	<div class="container">
+		<h2>Spring MVC 06</h2>
+		<div class="panel panel-primary">
+			<div class="panel-heading">Login Page</div>
+			<div class="panel-body">
+				<!-- 로그인 페이지 -->
+				<form action="login.do" method="post">
+					<table class="table table-bordered table-hover">
+						<tr>
+							<td><strong>아이디</strong></td>
+							<td><input name="id" type="text" class="form-control" placeholder="아이디를 입력하세요."></td>
+						</tr>
+						<tr>
+							<td><strong>비밀번호</strong></td>
+							<td><input name="pw" type="password" class="form-control" placeholder="비밀번호를 입력하세요."></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<a href="join.do">아직 회원이 아니시라면 여기를 클릭해주세요!</a>
+								<br>
+								<!-- 고정된 페이지 링크는 일반 href 사용 -->
+								<a href="boardList.do"><button type="button" class="btn btn-info">돌아가기</button></a>
+								<button type="reset" class="btn btn-danger">초기화</button>
+								<button type="submit" class="btn btn-success">로그인</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="panel-footer">LG DX - 김현도</div>
+	  	</div>
+	</div>
+</body>
+</html>

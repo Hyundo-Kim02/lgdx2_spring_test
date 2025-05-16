@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- BootStrap의 Panels, Tables 템플릿 사용 -->
+	<div class="container">
+		<h2>Spring MVC 06 - 타임리프</h2>
+		<div class="panel panel-primary">
+			<div class="panel-heading">Board List Page
+				<!-- unless 조건 : 조건문에 해당되지 않으면(else문) false 처리 -->
+				<span style="float: right;" th:unless="${session.info == null}" 
+					th:text="${session.info.nick} + '님 환영합니다!'"></span>
+			</div>
+			<div class="panel-body">
+				<!-- 게시판 -->
+				<table class="table table-bordered table-hover">
+					<tr class="warning">
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>조회수</th>
+						<th>날짜</th>
+					</tr>
+					
+					<!-- 타임리프(th) 반복문 -->
+					<tr th:each="vo : ${list}">
+						<td th:text="${vo.idx}"></td>
+						<!-- 타이림프 href : th:href="@{/주소명(변수명=${객체.변수명})} -->
+						<td><a th:href="@{/boardContents.do(idx=${vo.idx})}" th:text="${vo.title}"></a></td>
+						<td th:text="${vo.writer}"></td>
+						<td th:text="${vo.count}"></td>
+						<td th:text="${vo.indate}"></td>
+					</tr>
+					
+				</table>
+				
+				<a class="btn btn-primary" href="boardInsert.do">글쓰기</a>
+				
+				<!-- 로그인이 안 된 경우 로그인 표시, 로그인이 된 경우 로그아웃 표시 -->
+				<!-- Thymeleaf 태그 : Web 실행 시 th:block은 표시되지 않아 안 보인다 -->
+				<th:block th:if="${session.info == null}">
+					<a class="btn btn-success" href="login.do">로그인</a>
+				</th:block>
+				<th:block th:if="${session.info != null}">
+					<a class="btn btn-warning" href="logout.do">로그아웃</a>
+				</th:block>
+				
+			</div>
+			<div class="panel-footer">LG DX - 김현도</div>
+	  	</div>
+	</div>
+</body>
+</html>

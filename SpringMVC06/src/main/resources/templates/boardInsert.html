@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- BootStrap의 Panels, Tables 템플릿 사용 -->
+	<div class="container">
+		<h2>Spring MVC 06</h2>
+		<div class="panel panel-primary">
+			<div class="panel-heading">Board Insert Page</div>
+			<div class="panel-body">
+				<!-- 글쓰기 페이지 -->
+				<form action="boardInsert.do" method="post">
+					<table class="table table-bordered table-hover">
+						<tr>
+							<td><strong>제목</strong></td>
+							<td><input name="title" type="text" class="form-control" placeholder="제목을 입력하세요."></td>
+						</tr>
+						<tr>
+							<td>내용</td>
+							<td><textarea name="contents" rows="7" cols="" class="form-control" placeholder="본문 내용을 입력하세요."></textarea></td>
+						</tr>
+						<tr>
+							<td>작성자</td>
+							<td><input name="writer" type="text" class="form-control" placeholder="작성자를 입력하세요."></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<!-- 고정된 페이지 링크는 일반 href 사용 -->
+								<a href="boardList.do"><button type="button" class="btn btn-info">돌아가기</button></a>
+								<button type="reset" class="btn btn-danger">초기화</button>
+								<button type="submit" class="btn btn-success">작성완료</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="panel-footer">LG DX - 김현도</div>
+	  	</div>
+	</div>
+</body>
+</html>

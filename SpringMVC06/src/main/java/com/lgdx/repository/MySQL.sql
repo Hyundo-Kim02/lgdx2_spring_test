@@ -1,0 +1,16 @@
+INSERT INTO BOARD(TITLE, CONTENTS, WRITER) VALUES(
+	"안녕하세요", "반갑습니다", "김현도"
+);
+INSERT INTO BOARD(TITLE, CONTENTS, WRITER) VALUES(
+	"오늘어떠신가요", "잘지내고계신가요", "김현도"
+);
+INSERT INTO BOARD(TITLE, CONTENTS, WRITER) VALUES(
+	"안녕히가세요", "내일봅시다", "김현도"
+);
+
+COMMIT;
+
+SELECT * FROM BOARD;
+
+SELECT * FROM MEMBER;
+

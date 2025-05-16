@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join here page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- BootStrap의 Panels, Tables 템플릿 사용 -->
+	<div class="container">
+		<h2>Spring MVC 06</h2>
+		<div class="panel panel-primary">
+			<div class="panel-heading">Join Page</div>
+			<div class="panel-body">
+				<!-- 로그인 페이지 -->
+				<form action="join.do" method="post">
+					<table class="table table-bordered table-hover">
+						<tr>
+							<td><strong>아이디</strong></td>
+							<td><input name="id" type="text" class="form-control" placeholder="아이디를 입력하세요."></td>
+						</tr>
+						<tr>
+							<td><strong>비밀번호</strong></td>
+							<td><input name="pw" type="password" class="form-control" placeholder="비밀번호를 입력하세요."></td>
+						</tr>
+						<tr>
+							<td><strong>닉네임</strong></td>
+							<td><input name="nick" type="text" class="form-control" placeholder="닉네임을 입력하세요."></td>
+						</tr>
+						<tr>
+							<td><strong>거주지 주소</strong></td>
+							<td><input name="addr" type="text" class="form-control" placeholder="거주지 주소를 입력하세요."></td>
+						</tr>
+						
+						<tr>
+							<td colspan="2" align="center">
+								<!-- 고정된 페이지 링크는 일반 href 사용 -->
+								<a href="boardList.do"><button type="button" class="btn btn-info">돌아가기</button></a>
+								<button type="reset" class="btn btn-danger">초기화</button>
+								<button type="submit" class="btn btn-success">회원가입</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="panel-footer">LG DX - 김현도</div>
+	  	</div>
+	</div>
+</body>
+</html>
